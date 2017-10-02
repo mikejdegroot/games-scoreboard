@@ -4,8 +4,24 @@
     <div class="columns is-multiline">
       <div class="column is-full">
         <h1>Top players</h1>
-        <div ng-repeat="player in gamesIndex.players">
-          {{ player }}
+        <div>
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Won</th>
+              <th>Lost</th>
+              <th>Winning %</th>
+              <th>Points</th>
+            </tr>
+            <tr ng-repeat="player in gamesIndex.players">
+              <td>{{player.name}}</td>
+              <td>{{player.won}}</td>
+              <td>{{player.lost}}</td>
+              <td>{{player.aver}}</td>
+              <td>{{player.points}}</td>
+            </tr>
+          </table>
+
         </div>
 
       </div>

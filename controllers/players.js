@@ -15,9 +15,6 @@ function createRoute(req, res, next) {
     .catch(next);
 }
 
-
-
-
 module.exports = {
   index: indexRoute,
   create: createRoute
