@@ -1,9 +1,9 @@
 angular
   .module('gameApp')
-  .factory('game', game);
+  .factory('Game', Game);
 
-game.$inject = ['$resource'];
-function game($resource) {
+Game.$inject = ['$resource'];
+function Game($resource) {
   return new $resource('/api/games/:id', { id: '@id' }, {
     update: { method: 'PUT' }
   });

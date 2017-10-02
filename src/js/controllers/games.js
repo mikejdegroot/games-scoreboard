@@ -3,14 +3,14 @@ angular
 .controller('gamesIndexCtrl', gamesIndexCtrl);
 
 
-gamesIndexCtrl.$inject = ['game', '$state'];
-function gamesIndexCtrl(game, $state) {
+gamesIndexCtrl.$inject = ['Game', 'Player', '$state'];
+function gamesIndexCtrl(Game, Player, $state) {
   const vm = this;
   vm.game = {};
-  vm.all = game.query();
+  vm.games = Game.query();
 
   function gamesCreate() {
-    game
+    Game
     .save(vm.game)
     .$promise
     .then(() => $state.go('gamesIndex'));
@@ -26,4 +26,15 @@ function gamesIndexCtrl(game, $state) {
   }
 
   vm.delete = gamesDelete;
+  vm.players = Player.query();
+
+  function playersCreate() {
+    Player
+    .save(vm.player)
+    .$promise
+    .then(() => $state.go('gamesIndex'));
+
+  }
+  vm.playercreate = playersCreate;
+
 }

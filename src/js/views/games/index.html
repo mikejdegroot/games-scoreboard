@@ -2,9 +2,20 @@
 <div class="container">
   <section class="section">
     <div class="columns is-multiline">
-      <div ng-repeat="game in gamesIndex.all" class="column is-full">
-        <div class="info">
-          <h2 class="title">{{ game.playerOne }}</h2>
+      <div class="column is-full">
+        <h1>Top players</h1>
+        <div ng-repeat="player in gamesIndex.players">
+          {{ player }}
+        </div>
+
+      </div>
+      <div class="column is-one-third">
+        <h1>Recent Games</h1>
+        <div ng-repeat="game in gamesIndex.games" class="column is-full">
+            <ul class="title">
+              <li>{{ game.playerOne }}</li>
+              <li>{{ game.playerTwo }}</li>
+            </ul>
         </div>
       </div>
     </div>
