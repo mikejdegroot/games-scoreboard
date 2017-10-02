@@ -34,10 +34,34 @@
           <div class="field">
             <input type="submit" class="button is-primary" ng-click="gamesIndex.playercreate()" value="Create">
           </div>
-
         </form>
       </div>
-      <div class="column is-one-third">
+      <div class="clolumn is-one-third">
+        <h1>Create a Game</h1>
+        <form ng-submit="gamesIndex.gamesCreate()" name="gamesIndex.gameCreateForm">
+          <div class="field">
+            <select name="playerOne">
+              <option ng-repeat="player in gamesIndex.players" ng-model="gamesIndex.game.playerOne"> {{ player.name }}</option>
+            </select>
+          </div>
+          <div class="field">
+            <select name="playerTwo">
+              <option ng-repeat="player in gamesIndex.players" ng-model="gamesIndex.game.playerTwo"> {{ player.name }}</option>
+            </select>
+          </div>
+          <label for="playerOneScore">Player 1 Score</label>
+          <div class="field">
+            <input type="text" name="playerOneScore" placeholder="Score" ng-model="gamesIndex.game.PlayerOneScore">
+          </div>
+          <label for="playerTwoScore">Player 2 Score</label>
+          <div class="field">
+            <input type="text" name="playerTwoScore" placeholder="Score" ng-model="gamesIndex.game.PlayerTwoScore">
+          </div>
+          <input type="submit" class="button is-primary" ng-click="gamesIndex.create()" value="Create">
+        </form>
+
+      </div>
+      <div class="column is-two">
         <h1>Recent Games</h1>
         <div ng-repeat="game in gamesIndex.games" class="column is-full">
             <ul>
