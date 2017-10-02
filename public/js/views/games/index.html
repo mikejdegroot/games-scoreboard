@@ -41,12 +41,12 @@
         <form ng-submit="gamesIndex.create()" name="gamesIndex.gameCreateForm">
           <div class="field">
             <select name="playerOne" ng-model="gamesIndex.game.playerOne">
-              <option ng-repeat="player in gamesIndex.players" name="playerOne" value="{{ player.name }}" > {{ player.name }}</option>
+              <option ng-repeat="player in gamesIndex.players" name="playerOne" value="{{ player }}" > {{ player.name }}</option>
             </select>
           </div>
           <div class="field">
             <select name="playerTwo" ng-model="gamesIndex.game.playerTwo">
-              <option ng-repeat="player in gamesIndex.players" name="playerTwo" value="{{ player.name }}" > {{ player.name }}</option>
+              <option ng-repeat="player in gamesIndex.players" name="playerTwo" value="{{ player }}" > {{ player.name }}</option>
             </select>
           </div>
           <label for="playerOneScore">Player 1 Score</label>
@@ -66,8 +66,8 @@
         <div ng-repeat="game in gamesIndex.games" class="column is-full">
             <table>
               <tr>
-                <th>{{ game.playerOne }}</th>
-                <th>{{ game.playerTwo }}</th>
+                <th>{{ game.playerOne.name }}</th>
+                <th>{{ game.playerTwo.name }}</th>
               </tr>
               <tr>
                 <td>{{game.playerOneScore }}</td>

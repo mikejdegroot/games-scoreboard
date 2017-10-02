@@ -3,11 +3,11 @@ const Game = require('../models/game');
 function indexRoute(req, res, next) {
   Game
     .find()
-    // .populate('playerOne', 'playerTwo')
     .exec()
     .then((games) => res.json(games))
     .catch(next);
 }
+
 
 function createRoute(req, res, next) {
   Game

@@ -10,11 +10,19 @@ function gamesIndexCtrl(Game, Player, $state) {
   vm.games = Game.query();
 
   function gamesCreate() {
-    console.log(vm.game);
     Game
     .save(vm.game)
     .$promise
-    .then(() => $state.go('gamesIndex'));
+    .then(() => {
+
+      // if(vm.game.playerOneScore > vm.game.playerTwoScore) {
+      //   console.log(vm.game.playerOne );
+      //
+      // }
+
+      $state.go('gamesIndex');
+
+    });
 
   }
   vm.create = gamesCreate;
