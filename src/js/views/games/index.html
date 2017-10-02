@@ -21,14 +21,26 @@
               <td>{{player.points}}</td>
             </tr>
           </table>
-
         </div>
+      </div>
 
+
+      <div class="column is-one-third">
+        <h1>Create Player</h1>
+        <form ng-submit="gamesIndex.playersCreate()" name="gamesIndex.playerCreateForm">
+          <div class="field">
+            <input type="text" name="name" placeholder="name" ng-model="gamesIndex.player.name">
+          </div>
+          <div class="field">
+            <input type="submit" class="button is-primary" ng-click="gamesIndex.playercreate()" value="Create">
+          </div>
+
+        </form>
       </div>
       <div class="column is-one-third">
         <h1>Recent Games</h1>
         <div ng-repeat="game in gamesIndex.games" class="column is-full">
-            <ul class="title">
+            <ul>
               <li>{{ game.playerOne }}</li>
               <li>{{ game.playerTwo }}</li>
             </ul>

@@ -27,6 +27,7 @@ function gamesIndexCtrl(Game, Player, $state) {
 
   vm.delete = gamesDelete;
   vm.players = Player.query();
+  vm.player = {};
 
   function playersCreate() {
     Player

@@ -38,22 +38,8 @@ border-bottom: 2px solid #19647E;
   font-family: 'Noto Sans', sans-serif;
   .homeText {
     text-align: center;
-    font-size: 400px;
+    font-size: 200px;
     color: #8693AB;
     font-weight: 10;
-  }
-}
-
-.viewButton {
-  background-color: #19647E;
-  color: white;
-  border: solid 1px white;
-}
-
-
-.indexImage {
-  transition: all .2s ease-in-out;
-  &:hover {
-   transform: scale(1.02);
   }
 }
