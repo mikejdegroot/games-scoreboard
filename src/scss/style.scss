@@ -1,0 +1,59 @@
+@import "bulma/sass/utilities/initial-variables";
+
+$primary: #19647E;
+$danger: #D7263D;
+$family-serif: 'Nunito', sans-serif;
+$family-primary: $family-serif;
+
+@import "bulma/bulma";
+
+body {
+  background-color: #07101E;
+}
+main {
+  margin: 0 auto;
+  height: 100vh;
+}
+
+nav {
+position: static;
+border-bottom: 2px solid #19647E;
+
+  .navLink {
+    color: #8693AB;
+    letter-spacing: 3px;
+  }
+}
+
+.title {
+  letter-spacing: 2px;
+  padding: 5px 0;
+  color: #07101E;
+}
+
+.homeDiv {
+  width: 100%;
+  height: 100%;
+  background-color: #07101E;
+  font-family: 'Noto Sans', sans-serif;
+  .homeText {
+    text-align: center;
+    font-size: 400px;
+    color: #8693AB;
+    font-weight: 10;
+  }
+}
+
+.viewButton {
+  background-color: #19647E;
+  color: white;
+  border: solid 1px white;
+}
+
+
+.indexImage {
+  transition: all .2s ease-in-out;
+  &:hover {
+   transform: scale(1.02);
+  }
+}
