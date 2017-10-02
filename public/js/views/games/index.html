@@ -2,18 +2,9 @@
 <div class="container">
   <section class="section">
     <div class="columns is-multiline">
-      <div ng-repeat="game in gamesIndex.all" class="column is-one-third">
-        <div class="prof-pic">
-            <img class="indexImage" ng-src="{{ game }}">
-        </div>
+      <div ng-repeat="game in gamesIndex.all" class="column is-full">
         <div class="info">
-          <h2 class="title">{{ game.name }}</h2>
-        </div>
-        <div class="info">
-          <p>{{ game }}</p>
-        </div>
-        <div class="info">
-        <button class="button is-small viewButton" ui-sref="gamesShow({ id: game.id })">View</button>
+          <h2 class="title">{{ game.playerOne }}</h2>
         </div>
       </div>
     </div>
