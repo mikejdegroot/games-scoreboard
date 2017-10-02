@@ -38,24 +38,24 @@
       </div>
       <div class="clolumn is-one-third">
         <h1>Create a Game</h1>
-        <form ng-submit="gamesIndex.gamesCreate()" name="gamesIndex.gameCreateForm">
+        <form ng-submit="gamesIndex.create()" name="gamesIndex.gameCreateForm">
           <div class="field">
-            <select name="playerOne">
-              <option ng-repeat="player in gamesIndex.players" ng-model="gamesIndex.game.playerOne"> {{ player.name }}</option>
+            <select name="playerOne" ng-model="gamesIndex.game.playerOne">
+              <option ng-repeat="player in gamesIndex.players" name="playerOne" value="{{ player.name }}" > {{ player.name }}</option>
             </select>
           </div>
           <div class="field">
-            <select name="playerTwo">
-              <option ng-repeat="player in gamesIndex.players" ng-model="gamesIndex.game.playerTwo"> {{ player.name }}</option>
+            <select name="playerTwo" ng-model="gamesIndex.game.playerTwo">
+              <option ng-repeat="player in gamesIndex.players" name="playerTwo" value="{{ player.name }}" > {{ player.name }}</option>
             </select>
           </div>
           <label for="playerOneScore">Player 1 Score</label>
           <div class="field">
-            <input type="text" name="playerOneScore" placeholder="Score" ng-model="gamesIndex.game.PlayerOneScore">
+            <input type="text" name="playerOneScore" placeholder="Score" ng-model="gamesIndex.game.playerOneScore">
           </div>
           <label for="playerTwoScore">Player 2 Score</label>
           <div class="field">
-            <input type="text" name="playerTwoScore" placeholder="Score" ng-model="gamesIndex.game.PlayerTwoScore">
+            <input type="text" name="playerTwoScore" placeholder="Score" ng-model="gamesIndex.game.playerTwoScore">
           </div>
           <input type="submit" class="button is-primary" ng-click="gamesIndex.create()" value="Create">
         </form>
@@ -64,10 +64,17 @@
       <div class="column is-two">
         <h1>Recent Games</h1>
         <div ng-repeat="game in gamesIndex.games" class="column is-full">
-            <ul>
-              <li>{{ game.playerOne }}</li>
-              <li>{{ game.playerTwo }}</li>
-            </ul>
+            <table>
+              <tr>
+                <th>{{ game.playerOne }}</th>
+                <th>{{ game.playerTwo }}</th>
+              </tr>
+              <tr>
+                <td>{{game.playerOneScore }}</td>
+                <td>{{game.playerTwoScore }}</td>
+              </tr>
+
+            </table>
         </div>
       </div>
     </div>

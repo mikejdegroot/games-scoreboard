@@ -10,6 +10,7 @@ function gamesIndexCtrl(Game, Player, $state) {
   vm.games = Game.query();
 
   function gamesCreate() {
+    console.log(vm.game);
     Game
     .save(vm.game)
     .$promise

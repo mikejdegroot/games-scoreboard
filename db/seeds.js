@@ -30,18 +30,18 @@ Player
     .create([{
       playerOne: players[0],
       playerTwo: players[1],
-      PlayerOneScore: 10,
-      PlayerTwoScore: 15
+      playerOneScore: 10,
+      playerTwoScore: 15
     },{
       playerOne: players[0],
       playerTwo: players[2],
-      PlayerOneScore: 10,
-      PlayerTwoScore: 20
+      playerOneScore: 10,
+      playerTwoScore: 20
     },{
       playerOne: players[1],
       playerTwo: players[0],
-      PlayerOneScore: 10,
-      PlayerTwoScore: 30
+      playerOneScore: 10,
+      playerTwoScore: 30
     }
     ]);
   })
